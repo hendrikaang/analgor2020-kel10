@@ -6,7 +6,7 @@
 #define MAX_CHAR 20
 
 // membalik urutan dalam array
-void kebalikGan(double arr[][COL]){
+void reverse(double arr[][COL]){
     double bantu[1][COL];
     int i, j;
     for(i=0; i<NEG/2; i++){
@@ -106,14 +106,14 @@ int main() {
     scanf("%d", &urutBy);
     if (urutBy==0){    // by density
         mergeSort(arr, 0, NEG-1, 4);
-        kebalikGan(arr);
+        reverse(arr);
     } else if (urutBy == 1){ // by profit
         mergeSort(arr, 0, NEG-1, 3);
-        kebalikGan(arr);
+        reverse(arr);
     } else if (urutBy == 2){ // by cost
         mergeSort(arr, 0, NEG-1, 0);
     } else {
-        printf("jangan ngadi-ngadi\n");
+        printf("Input tidak valid\n");
     }
 
     // memasukkan data nama negara
@@ -146,7 +146,7 @@ int main() {
         "Qatar",
         "China"
     };
-    // TakeMeOut
+    // Greedy
     int modal, totalCost, untung;
     scanf("%d", &modal);
     totalCost = 0;
